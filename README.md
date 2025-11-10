@@ -119,7 +119,7 @@ The Perlin noise visualization responds to sentiment in three ways:
 **Frontend:** Deployed on Vercel
 **Backend:** Deployed on Vercel as serverless function
 
-Live URL: https://frontend-dun-kappa-93.vercel.app
+Live URL: https://livesentimentaura.vercel.app
 
 ## Project Structure
 
