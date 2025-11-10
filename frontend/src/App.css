@@ -1,0 +1,133 @@
+/* CLEAN MINIMAL DESIGN - PERFECT SIZED BOXES */
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+.ui-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.ui-overlay > * {
+  pointer-events: auto;
+}
+
+/* No background box for header - just floating text */
+.header {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 0;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0;
+  color: #e5e7eb;
+  letter-spacing: -0.5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #9ca3af;
+  margin: 12px 0 0 0;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+/* Clean error message */
+.error-message {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* SLEEK HORIZONTAL BAR */
+.sentiment-info {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 200;
+}
+
+.sentiment-bar {
+  display: block;
+  width: 100%;
+  height: 12px;
+  background: rgba(30, 30, 40, 0.9);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid rgba(60, 60, 70, 0.8);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.sentiment-fill {
+  height: 100%;
+  width: 0%;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 20px;
+  position: relative;
+  box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Animated shimmer effect */
+.sentiment-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.emotion-label {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+}

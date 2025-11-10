@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Environment variables
+.env
+.env.local
+frontend/.env
+backend/.env
+
+# Production
+frontend/build/
+dist/
+
+# Misc
+.DS_Store
+*.log
+npm-debug.log*
+
+# Vercel
+.vercel

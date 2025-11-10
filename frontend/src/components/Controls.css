@@ -1,0 +1,109 @@
+/* BUTTON POSITIONED HIGHER */
+
+.controls {
+  position: fixed;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  z-index: 200;
+}
+
+.control-button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 2px solid;
+  transition: all 0.3s ease;
+}
+
+/* Clean start button - MORE VISIBLE */
+.start-button .button-content {
+  background: rgba(0, 200, 220, 0.3);
+  color: #00e5ff;
+  border-color: rgba(0, 200, 220, 0.7);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 200, 220, 0.3);
+}
+
+.start-button:hover .button-content {
+  transform: scale(1.08);
+  background: rgba(0, 200, 220, 0.4);
+  border-color: rgba(0, 200, 220, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 200, 220, 0.4);
+}
+
+/* Clean stop button - MORE VISIBLE */
+.stop-button .button-content {
+  background: rgba(255, 60, 100, 0.3);
+  color: #ff4d6d;
+  border-color: rgba(255, 60, 100, 0.7);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 60, 100, 0.3);
+}
+
+.stop-button:hover .button-content {
+  transform: scale(1.08);
+  background: rgba(255, 60, 100, 0.4);
+  border-color: rgba(255, 60, 100, 0.9);
+  box-shadow: 0 8px 24px rgba(255, 60, 100, 0.4);
+}
+
+/* Simple recording indicator */
+.recording-indicator {
+  width: 10px;
+  height: 10px;
+  background: currentColor;
+  border-radius: 50%;
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Smaller processing indicator */
+.processing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: rgba(30, 30, 40, 0.9);
+  border-radius: 30px;
+  color: #9ca3af;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(156, 163, 175, 0.3);
+  border-top-color: #9ca3af;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
