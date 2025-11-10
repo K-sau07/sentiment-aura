@@ -4,6 +4,8 @@ A real-time AI-powered application that visualizes emotional sentiment through l
 
 **Live Demo:** https://livesentimentaura.vercel.app
 
+**Demo Video:** https://drive.google.com/file/d/15O667wKaDXgcSz9GynX6vPbGPOiOt14m/view?usp=drive_link
+
 ## Overview
 
 This application captures spoken audio, transcribes it in real-time, analyzes the emotional sentiment using AI, and visualizes the results through an interactive Perlin noise particle system. Different emotions trigger unique colors and movement patterns, creating a dynamic visual representation of speech.
